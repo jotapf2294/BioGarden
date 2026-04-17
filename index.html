@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <title>BioGarden Pro</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav class="bottom-nav">
+        <button onclick="router('dashboard')">🏠 Dashboard</button>
+        <button onclick="router('garden')">🌿 Minha Horta</button>
+        <button onclick="router('wiki')">📚 Minha Wiki</button>
+        <button onclick="router('config')">⚙️ App</button>
+    </nav>
+
+    <main id="app">
+        </main>
+
+    <div id="modal" class="modal-overlay" style="display:none">
+        <div class="modal">
+            <h2 id="modalTitle">Nova Plantação</h2>
+            <form id="plantForm">
+                <input type="text" id="p_nome" placeholder="Nome (Ex: Tomate Cherry)" required>
+                <input type="text" id="p_strain" placeholder="Strain / Variedade">
+                <select id="p_zona">
+                    <option value="Varanda">Varanda</option>
+                    <option value="Canteiro Sul">Canteiro Sul</option>
+                    <option value="Interior">Interior</option>
+                </select>
+                <label>Data da Sementeira:</label>
+                <input type="date" id="p_data">
+                <input type="number" id="p_ciclo" placeholder="Dias até colheita (ex: 90)">
+                <button type="submit" class="btn-save">Registar</button>
+                <button type="button" onclick="closeModal()">Cancelar</button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
